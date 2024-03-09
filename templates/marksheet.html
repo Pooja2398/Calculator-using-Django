@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .row {
+            margin: 20px auto;
+            margin-top: 180px;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+        }
+    
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 20%;
+            padding: 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-12">
+            <h2>MarkSheet</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label>Number 1</label>
+                <input type="text" name="num1" placeholder="Enter a number" class="form-control"/><br/><br/>
+                <label>Number 2</label>
+                <input type="text" name="num2" placeholder="Enter a number" class="form-control"/><br/><br/>
+                <label>Number 3</label>
+                <input type="text" name="num3" placeholder="Enter a number" class="form-control"/><br/><br/>
+                <label>Number 4</label>
+                <input type="text" name="num4" placeholder="Enter a number" class="form-control"/><br/><br/>
+                <label>Number 5</label>
+                <input type="text" name="num5" placeholder="Enter a number" class="form-control"/><br/><br/><br/>
+                <button type="submit">Submit</button><br/><br/>
+                <label>Total</label>
+                <input type="text" value="{{total}}" class="form-control"/><br/><br/>
+                <label>Percentage</label>
+                <input type="text" value="{{per}}" class="form-control"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Even or Odd Checker</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .row {
+        margin: 20px auto;
+        margin-top: 180px;
+        max-width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        width: 20%;
+        padding: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+
+</style>
+</head>
+
+<body>
+<div class="row">
+    <div class="col-12">
+        <h2>Even or Odd Checker</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>Number</label>
+            <input type="text" name="num1" placeholder="Enter a number" class="form-control"/><br/><br/>
+            <button type="submit">Submit</button><br/><br/>
+            <label>Output</label>
+            <input type="text" value="{{c}}" class="form-control"/>
+        </form>
+    </div>
+</div>
+</body>
