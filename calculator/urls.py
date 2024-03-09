@@ -22,4 +22,7 @@ urlpatterns = [
     path('', views.calculator),
     path('admin/', admin.site.urls),
     path('calculator/', views.calculator),
+    path('evenorodd/', views.evenorodd),
+    path('marksheet/', views.marksheet),
+
 ]
